@@ -1,0 +1,20 @@
+# TeX auxillary files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+
+# BibTeX auxillary files
+*.bbl
+*.blg
+
+# SyncTeX auxillary files
+*.synctex*
+
+# Latexmk auxillary files
+*.fdb_latexmk
+
+# TeX compiled documents
+*.dvi
+/*.pdf
