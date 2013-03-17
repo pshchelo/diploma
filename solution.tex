@@ -1,20 +1,20 @@
 % !TeX root = diploma.tex
 
-\chapter{Приближенные решения вариационного уравнения}\label{ch-solution}
+\chapter{Приближенные решения вариационного уравнения}\label{ch:solution}
 
-\section{Поиск точных решений}\label{sec-exact}
-Вариационное уравнение Эйлера-Лагранжа для функционала \eqref{eq-TPfull} имеет следующий вид \eqref{eq-TPvar}:
+\section{Поиск точных решений}\label{sec:exact}
+Вариационное уравнение Эйлера-Лагранжа для функционала \eqref{eq:TPfull} имеет следующий вид \eqref{eq:TPvar}:
 \begin{equation*}
 \varphi^{(IV)} + 
 g\left(\varphi^2\varphi'' + \varphi\left(\varphi'\right)^2\right) +
 \gamma\varphi'' + q\varphi + p\varphi^3 + h\varphi^5 = 0.
-\label{eq-TPvar_}
+\label{eq:TPvar_}
 \end{equation*}
 
 Для исследования этого уравнения используем подстановку
 \begin{equation}
 \varphi'^2 = \sum_{n=0}^3 a_n \varphi^{2n},
-\label{eq-subst3}
+\label{eq:subst3}
 \end{equation}
 вследствие чего получаем:
 \begin{equation}
@@ -39,9 +39,9 @@ g\left(\varphi^2\varphi'' + \varphi\left(\varphi'\right)^2\right) +
 \end{equation}
 из равенства нулю коэффициентов которого получается система уравнений для определения $a_0, a_1, a_2, a_3$. Сразу видно, что $a_3=0$. Это значит, что в рамках данной модели точные решения невозможны (модель редуцируется к уже изученной более простой модели $\varphi'^2 = \sum_{n=0}^2 a_n \varphi^{2n}$). Этот факт согласуется с результатами, полученными в \cite{Berezovsky1998}.
 
-\section{Некоторые частные решения}\label{sec-part}
+\section{Некоторые частные решения}\label{sec:part}
 
-Как ясно из вида подстановки \eqref{eq-subst3}, она сама является дифференциальным уравнением относительно $\varphi(x)$. Остановимся на его решениях подробнее.
+Как ясно из вида подстановки \eqref{eq:subst3}, она сама является дифференциальным уравнением относительно $\varphi(x)$. Остановимся на его решениях подробнее.
 
 \begin{equation}
 \varphi'^2 = a_0 + a_1\varphi^2 + a_2\varphi^4 + a_3\varphi^6
@@ -51,19 +51,19 @@ g\left(\varphi^2\varphi'' + \varphi\left(\varphi'\right)^2\right) +
 (предполагается, что $\varphi'(x) \ne 0$, так как это тривиальный случай $\varphi = \mathrm{const}$, который не представляет интереса), получаем следующее нелинейное уравнение:
 \begin{equation}
 \varphi'' = a_1\varphi + 2a_2\varphi^3 + 3a_3\varphi^5
-\label{eq-subst3diff}
+\label{eq:subst3diff}
 \end{equation}
 
 Исходя из \cite{Ishibashi1984, Kovalev1976}, можно сделать предположение о том, что у данного уравнения существует следующих три вида частных решений:
 \begin{align}
-\varphi(x) = \frac{A\sn(bx,k)}{\sqrt{C-\sn^2(bx,k)}}\label{eq-partsn}\\
-\varphi(x) = \frac{A\cn(bx,k)}{\sqrt{C-\cn^2(bx,k)}}\label{eq-partcn}\\
-\varphi(x) = \frac{A\dn(bx,k)}{\sqrt{C-\dn^2(bx,k)}}\label{eq-partdn}
+\varphi(x) = \frac{A\sn(bx,k)}{\sqrt{C-\sn^2(bx,k)}}\label{eq:partsn}\\
+\varphi(x) = \frac{A\cn(bx,k)}{\sqrt{C-\cn^2(bx,k)}}\label{eq:partcn}\\
+\varphi(x) = \frac{A\dn(bx,k)}{\sqrt{C-\dn^2(bx,k)}}\label{eq:partdn}
 \end{align}
 
-Прямой подстановкой в уравнение \eqref{eq-subst3diff} несложно показать, что коэффициенты этих решений удовлетворяют следующим системам уравнений:
+Прямой подстановкой в уравнение \eqref{eq:subst3diff} несложно показать, что коэффициенты этих решений удовлетворяют следующим системам уравнений:
 
-для решений типа $\sn$ \eqref{eq-partsn}
+для решений типа $\sn$ \eqref{eq:partsn}
 \begin{equation}
 \begin{cases}
 a_1 C = b^2 \left(3 - C - Ck^2\right) \\
@@ -72,7 +72,7 @@ a_1 - 2a_2 A^2 + 3a_3 A^4 = b^2 k^2 C
 \end{cases}
 \end{equation}
 
-для решений типа $\cn$ \eqref{eq-partcn}
+для решений типа $\cn$ \eqref{eq:partcn}
 \begin{equation}
 \begin{cases}
 a_c C = b^2 \left(3 - C - Ck^2\right)\\
@@ -81,7 +81,7 @@ a_1 - 2a_2 A^2 + 3a_3 A^4 = b^2k^2C
 \end{cases}
 \end{equation}
 
-для решений типа $\dn$ \eqref{eq-partdn}
+для решений типа $\dn$ \eqref{eq:partdn}
 \begin{equation}
 \begin{cases}
 a_1 C = b^2\left(2C - 3 + k^2(3-C)\right)\\
@@ -101,11 +101,11 @@ a = \frac{1}{2}\left[1-\sqrt{1-\frac{3a_1 a_3}{a_2^2}}\right], \quad
 K = sqrt{\frac{2a_2^2}{3a_3}(1-a)(1-2a)},
 \end{equation*}
 приведеное в \cite{Ishibashi1984} и 
-\begin{equation}\label{eq-kovalev}
+\begin{equation}\label{eq:kovalev}
 \varphi(x) = \sqrt{\frac{2a_1 a/a_2}{-a + \ch\left(2\sqrt{a_1 x}\right)}},
 \qquad \text{где} \quad a = \left[1 - \frac{4a_1 a_3}{a_2^2}\right]^{\nicefrac{1}{2}},
 \end{equation}
-приведенное в \cite{Kovalev1976} являются предельными случаями $k \rightarrow 1$ решений \eqref{eq-partsn} и \eqref{eq-partdn} соответственно, а аналогичный предел решения \eqref{eq-partcn} имеет тот же вид функциональной зависимости, что и \eqref{eq-kovalev}, но с другими коэффициентами:
+приведенное в \cite{Kovalev1976} являются предельными случаями $k \rightarrow 1$ решений \eqref{eq:partsn} и \eqref{eq:partdn} соответственно, а аналогичный предел решения \eqref{eq:partcn} имеет тот же вид функциональной зависимости, что и \eqref{eq:kovalev}, но с другими коэффициентами:
 \begin{equation}
 \varphi(x) = \frac{A}{\sqrt{\left(\frac{c}{2}-1\right) + \frac{c}{2}\ch\left(2\sqrt{a_1 x}\right)}},
 \end{equation}
@@ -116,9 +116,103 @@ c = \frac{1}{a}\left(a-5 \pm \sqrt(25-96a)\right), \;
 A^2 = \frac{2a_1}{a_2}(1-c).
 \end{equation*}
 
-\section{Аналитический поиск решения}\label{sec-analyt}
+\section{Аналитический поиск решения}\label{sec:analyt}
 
-\section{Выводы}\label{sec-soloutro}
+Дифференциальные уравнения, аналогичные исследуемому, возникают при рассмотрении задачи о 180$^\circ$-ой доменной стенке в сегнетоэлектриках типа титаната бария. Действуя аналогично изложенной в \cite{Kholodenko1971} схеме, аналитически найдем интересующие нас решения.
+
+Исходное уравнение имеет вид:
+\begin{equation}\label{}
+\begin{cases}
+\varphi'' = a_1\varphi + 2a_2 \varphi^3 + 3a_3\varphi^5\\
+\varphi(x=\infty) = \varphi_0
+\end{cases}
+\end{equation}
+
+Заменой
+\begin{equation}
+w = \sqrt{\frac{3a_3}{|2a_2|}}\varphi,\;
+t = \sqrt{\frac{4a_2^2}{3a_3}}x,\;
+w_0 = \sqrt{\frac{3a_3}{|2a_2|}}\varphi_0
+\end{equation}
+обезразмерим уравнение, приведя его к виду
+\begin{equation}\label{eq:dimless}
+\frac{d^2 w}{dt^2} = qw + \nu w^3 + w^5,
+\quad\text{где}\quad
+\nu = \frac{|a_2|}{a_2} = \pm1,\; q = \frac{3a_1 a_3}{4a_2^2}.
+\end{equation}
+Интегрируя \eqref{eq:dimless} один раз, получим
+\begin{equation}\label{eq:dimlessint}
+\frac{1}{2}\left(\frac{dw}{dt}\right)^2 = 
+\frac{1}{2}qw^2 + \frac{\nu}{4}w^4 + \frac{1}{6}w^6 - 
+\left( \frac{1}{2}qw_0^2 + \frac{\nu}{4}w_0^4 + \frac{1}{6}w_0^6\right).
+\end{equation}
+Далее, заменой переменной
+\begin{equation}\label{eq:substy4w}
+w^2 = \frac{P+Qy}{1+y}
+\end{equation}
+приводим уравнение \eqref{eq:dimlessint} к виду:
+\begin{equation}\label{eq:dimlessintsubst}
+\frac{1}{4}(P-Q)^2 = 
+\left[y^2(Q^2-Qw_0^2) + (P^2 - Pw_0^2)\right]
+\frac{1}{3}\left[y^2(Q^2+QA+\frac{B}{2}) + 
+(P^2 + PA +\frac{B}{2})\right],
+\end{equation}
+где
+\begin{equation}
+A = w_0^2 + \frac{3}{2}\nu, \; 
+B = 6q + 3\nu w_0^2 + 2w_0^4.
+\end{equation}
+
+Для того, чтобы уравнение, получающееся после замены \eqref{eq:substy4w}, не содержало других степеней $y$, кроме 2 (то есть имело вид \eqref{eq:dimlessintsubst}), коэффициенты $P$ и $Q$ должны удовлетворять следующим уравнениям
+\begin{equation}
+P+Q = R, \; PQ = \frac{w_0^2}{2}R
+\end{equation}
+а поэтому
+\begin{equation}
+P = \frac{1}{2}\left[R - \sqrt{R^2 - 2Rw_0^2}\right], \;
+Q = \frac{1}{2}\left[R + \sqrt{R^2 - 2Rw_0^2}\right].
+\end{equation}
+
+При различных знаках величин, стоящих в квадратных скобках, уравнение \eqref{eq:dimlessintsubst} имеет решения различного типа. Те из них, что соответствуют ограниченным $\varphi$ (которые нас и интересуют по смыслу задачи), получаются при таких соотношениях между коэффициентами:
+\begin{equation}\label{eq:substmn}
+\begin{aligned}
+Q^2 - Qw_0^2 \equiv m_1^2 > 0, \; 
+Pw_0^2 - P^2 \equiv n_1 > 0 \\
+\frac{1}{3}\left(Q^2 +QA + \frac{1}{2}B\right) \equiv m_2 >0, \;
+-\frac{1}{3}\left(P^2 +PA + \frac{1}{2}B\right) \equiv n_2 >0
+\end{aligned}
+\end{equation}
+
+Используя обозначения \eqref{eq:substmn} приводим уравнение к виду
+\begin{equation}
+\left[
+\left(\frac{n_1^2}{m_1^2}-y^2\right)
+\left(\frac{n_2^2}{m_2^2}-y^2\right)
+\right]^{-\frac{1}{2}}dy = 
+\frac{2m_1 m_2}{Q-P}\,dt
+\end{equation}
+
+Это уравнение имеет решение
+\begin{equation}
+y = \frac{n_1}{m_1}\sn(\omega t +c, k),
+\quad\text{где}\quad
+k = \frac{n_1}{m_1}\frac{m_2}{n_2}, \; \omega = \frac{2n_2 m_1}{Q-P}
+\end{equation}
+
+Выбирая начало отсчета $t$ так, чтобы при $t=0$ было $w = 0$, и учитывая, что
+\begin{equation}
+\frac{P}{Q} = \frac{P - w_0^2}{W_0^2 - Q} = \frac{n_1}{m_1}
+\end{equation}
+находим, что $c = -K(k)$, где $K(k)$ - полный эллиптический интеграл первого рода.
+
+Таким образом, решение уравнения \ref{eq:dimlessint} получается в виде
+\begin{equation}
+w^2 = Q\frac{1 - \frac{\cn(\omega t, k)}{\dn(\omega t, k)}}
+{\frac{m_1}{n_1} - \frac{\cn(\omega t, k)}{\dn(\omega t, k)}}
+\end{equation}
+
+
+\section{Выводы}\label{sec:soloutro}
 
 В рамках подхода теории Гинзбурга - Ландау была рассмотрена модель образования пространственно модулированных структур в системах со  скалярным параметром порядка, описываемых определенным видом термодинамического потенциала.
 С помощью подстановки  $\varphi'^2 = \sum_{n=0}^3 a_n \varphi^{2n}$, получены приближенные частные решения вариационного уравнения для выбранного вида термодинамического потенциала, являющиеся функциями гиперэллиптического типа.
