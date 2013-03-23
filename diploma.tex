@@ -11,6 +11,8 @@
 
 
 \usepackage{subfig}
+% next for subfigure references with russian letters
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}
 \usepackage[pdftex]{graphicx}
 \usepackage{hyperref}
 % next one for links to point to the figure/table,
@@ -42,7 +44,6 @@
 	\include{solution}
 	\include{application}
 	\include{conclusion}
-	
 	\bibliography{diploma}
 
 \end{document}
